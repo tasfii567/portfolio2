@@ -871,77 +871,41 @@
     }
 
     /* ==========================================
-       BOTTOM DOCK
-    ========================================== */
-    .dock {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      padding: 8px 14px;
-      background: rgba(0, 255, 255, 0.08);
-      border: 1px solid rgba(0, 255, 255, 0.4);
-      backdrop-filter: blur(20px);
-      border-radius: 50px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-    }
-    .dock-btn {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px; height: 44px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: var(--text-dim);
-      transition: all 0.2s;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-    }
-    .dock-btn:hover {
-  color: #00ffff; /* neon cyan */
-  background: red;
-  transform: translateY(-4px);
-  box-shadow: 
-    0 0 8px rgba(0, 255, 255, 0.8),
-    0 0 16px rgba(0, 255, 255, 0.6),
-    0 0 24px rgba(0, 255, 255, 0.4);
-}
-   .dock-btn.active {
-  color: #00ffff;
-  background: rgba(0, 255, 255, 0.2);
-  box-shadow: 
-    0 0 10px rgba(0, 255, 255, 0.9),
-    0 0 20px rgba(0, 255, 255, 0.5);
-}
-    .dock-btn svg { width: 20px; height: 20px; }
-    .dock-tip {
-      position: absolute;
-      bottom: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      filter: drop-shadow(0 0 6px #00ffff);
-      color: var(--text);
-      font-family: var(--font-mono);
-      font-size: 10px;
-      padding: 4px 10px;
-      border-radius: 5px;
-      white-space: nowrap;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.15s;
-      letter-spacing: 0.05em;
-    }
-    
-    .dock-btn:hover .dock-tip { opacity: 1; }
+   BOTTOM DOCK
+========================================== */
 
+.dock {
+  position: fixed;
+  bottom: 20px; /* bottom-5 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 24px; /* gap-6 */
+  padding: 12px 24px; /* py-3 px-6 */
+
+  border-radius: 999px;
+  background: black;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  box-shadow: 0 0 25px rgba(59,130,246,0.4);
+
+  transition: all 0.5s ease;
+  
+@media (min-width: 768px) {
+  .dock {
+    gap: 32px;
+    padding: 16px 40px;
+  }
+}
     /* ==========================================
        HEADER (Lucyyy-style)
     ========================================== */
