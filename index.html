@@ -1070,20 +1070,53 @@
     /* ==========================================
        RESPONSIVE
     ========================================== */
-    @media (max-width: 800px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-photo-wrap { max-width: 280px; margin: 0 auto; }
-      .about-stats { grid-template-columns: repeat(2, 1fr); }
-      .skills-layout { grid-template-columns: 1fr; }
-      .timeline-cards { grid-template-columns: 1fr; }
-      .timeline-line { display: none; }
-      .contact-links { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      nav { padding: 0 20px; }
-      .section { padding: 70px 20px; }
-      .topbar-btn span { display: none; }
-      .top-bar { padding: 10px 16px; }
-    }
+   @media (max-width: 800px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo-wrap { max-width: 280px; margin: 0 auto; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .skills-layout { grid-template-columns: 1fr; }
+  .timeline-cards { grid-template-columns: 1fr; }
+  .timeline-line { display: none; }
+  .contact-links { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  nav { padding: 0 20px; }
+  .section { padding: 70px 20px; }
+  .top-bar { padding: 10px 16px; }
+
+  .hamburger { display: flex; }
+
+  .topbar-right {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: rgba(10,15,30,0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    gap: 8px;
+    z-index: 999;
+  }
+  .topbar-right.open { display: flex; }
+  .topbar-btn { justify-content: flex-start; }
+  .topbar-btn span { display: block !important; }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--cyan);
+  border-radius: 2px;
+}
   </style>
 </head>
 <body>
@@ -1102,6 +1135,9 @@
         </div>
       </div>
     </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
     <div class="topbar-right">
       
         <a href="#about" class="topbar-btn">
@@ -1466,7 +1502,9 @@
       <span class="dock-tip">Contact</span>
     </a>
   </nav>
-
+function toggleMenu() {
+  document.querySelector('.topbar-right').classList.toggle('open');
+}
   <script>
     // ===== TYPEWRITER =====
     const phrases = ["Software Testing", "AI Researcher", "Full-Stack Developer", "Problem Solver","Creative Thinker"];
