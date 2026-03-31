@@ -8,10 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* ==========================================
-       EXACT REPLICA OF tasfiia.netlify.app
-       Dark navy + cyan/teal theme
-    ========================================== */
+    
     :root {
       --bg-primary: #0a0f1e;
       --bg-secondary: #0d1526;
@@ -886,9 +883,9 @@
       align-items: center;
       gap: 2px;
       padding: 8px 14px;
-      background: rgba(10,15,30,0.92);
+      background: rgba(0, 255, 255, 0.08);
+      border: 1px solid rgba(0, 255, 255, 0.4);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(0,212,255,0.2);
       border-radius: 50px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     }
@@ -907,14 +904,21 @@
       cursor: pointer;
     }
     .dock-btn:hover {
-      color: var(--cyan);
-      background: rgba(0,212,255,0.1);
-      transform: translateY(-3px);
-    }
-    .dock-btn.active {
-      color: var(--cyan);
-      background: rgba(0,212,255,0.1);
-    }
+  color: #00ffff; /* neon cyan */
+  background: rgba(0, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 0 8px rgba(0, 255, 255, 0.8),
+    0 0 16px rgba(0, 255, 255, 0.6),
+    0 0 24px rgba(0, 255, 255, 0.4);
+}
+   .dock-btn.active {
+  color: #00ffff;
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.9),
+    0 0 20px rgba(0, 255, 255, 0.5);
+}
     .dock-btn svg { width: 20px; height: 20px; }
     .dock-tip {
       position: absolute;
@@ -923,6 +927,7 @@
       transform: translateX(-50%);
       background: var(--bg-card);
       border: 1px solid var(--border);
+      filter: drop-shadow(0 0 6px #00ffff);
       color: var(--text);
       font-family: var(--font-mono);
       font-size: 10px;
@@ -934,6 +939,7 @@
       transition: opacity 0.15s;
       letter-spacing: 0.05em;
     }
+    
     .dock-btn:hover .dock-tip { opacity: 1; }
 
     /* ==========================================
@@ -1214,23 +1220,13 @@
           <div class="t-inner">
            ]
             <div class="t-icon">🚀</div>
-            <div class="t-title">AI</div>
-            <p class="t-desc">Got into the world of ML and Ai and found my true passion.</p>
+            <div class="t-title">AI and Software Testing</div>
+            <p class="t-desc">Got into the world of ML and AI and found my true passion. Also began the journey towards testing and automation.</p>
           </div>
         </div>
-          <div class="t-card">
-          <div class="t-dot"></div>
-          <div class="t-inner">
-           ]
-            <div class="t-icon">🧪</div>
-            <div class="t-title">Testing</div>
-            <p class="t-desc">Found out about sodtware testing.</p>
-          </div>
-      </div>
         <div class="t-card">
           <div class="t-dot"></div>
           <div class="t-inner">
-           ]
             <div class="t-icon">📈</div>
             <div class="t-title">Growing Skill</div>
             <p class="t-desc">Expanded expertise in modern frameworks, databases, and best practices. Completed 10+ projects and earned certifications.</p>
@@ -1252,7 +1248,7 @@
       <canvas id="constellation-canvas"></canvas>
     </div>
     <div style="margin-top:40px" class="fade-up">
-      <div class="section-tag">// competency_matrix</div>
+      <div class="section-tag"></div>
       <div class="skills-layout" style="margin-top:24px">
         <div class="skills-matrix">
           <div class="skill-bar-item">
@@ -1269,26 +1265,26 @@
           </div>
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span class="skill-bar-name">Node.js &amp; APIs</span><span class="skill-bar-pct">70%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
           </div>
         </div>
         <div class="skills-matrix">
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span class="skill-bar-name">MongoDB &amp; SQL</span><span class="skill-bar-pct">72%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:72%"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div>
           </div>
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span class="skill-bar-name">AI / OpenAI API</span><span class="skill-bar-pct">68%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:68%"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
           </div>
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span class="skill-bar-name">Geolocation &amp; Maps</span><span class="skill-bar-pct">65%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div>
           </div>
           </div>
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span class="skill-bar-name">TestRail</span><span class="skill-bar-pct">65%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
           </div>
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span class="skill-bar-name">Azure</span><span class="skill-bar-pct">88%</span></div>
@@ -1304,7 +1300,7 @@
   <!-- PROJECTS -->
   <section class="section" id="projects">
     <div class="section-header fade-up">
-      <div class="section-tag">// my_projects</div>
+      <div class="section-tag"></div>
       <h2 class="section-title">My <span>Projects</span></h2>
       <p class="section-sub">Things I've built and shipped</p>
     </div>
@@ -1377,17 +1373,17 @@
   <!-- CERTIFICATIONS -->
   <section class="section" id="certifications">
     <div class="section-header fade-up">
-      <div class="section-tag">// certifications</div>
-      <h2 class="section-title">My <span>Certificates</span></h2>
+      <div class="section-tag"></div>
+      <h2 class="section-title">Certifications</span></h2>
       <p class="section-sub">Verified credentials and professional achievements</p>
     </div>
     <div class="certs-cards-grid">
-      <div class="cert-card fade-up"><span class="cert-card-icon">🏆</span><div class="cert-card-name">AI+ Foundation™</div><div class="cert-card-issuer">AICERTs · Aug 2025</div><a href="#" class="cert-view-link">View Certificate →</a></div>
+      <div class="cert-card fade-up"><span class="cert-card-icon">🏆</span><div class="cert-card-name">AI+ Foundation™</div><div class="cert-card-issuer">AICERTs · Aug 2025</div><a href="https://drive.google.com/file/d/1bfnWuU6qd3ANTclbcD-kMtRTDEOSFs4K/view?usp=sharing" class="cert-view-link">View Certificate →</a></div>
+      <div class="cert-card fade-up"><span class="cert-card-icon">🪟</span><div class="cert-card-name">Create and Draft with M365 Copilot</div><div class="cert-card-issuer">Microsoft · Jun 2025</div><a href="https://drive.google.com/file/d/1DNATU3YLouktO6hzvCZGAe7arQIB4Rbi/view?usp=sharing" class="cert-view-link">View Certificate →</a></div>
+      <div class="cert-card fade-up"><span class="cert-card-icon">🪟</span><div class="cert-card-name">Optimize and Extend M365 Copilot</div><div class="cert-card-issuer">Microsoft · Jun 2025</div><a href="https://drive.google.com/file/d/1q30aZDhH7gNF1jxHPbbG0onPzIRskquV/view?usp=sharing" class="cert-view-link">View Certificate →</a></div>
       
-      <div class="cert-card fade-up"><span class="cert-card-icon">🪟</span><div class="cert-card-name">Create and Draft with M365 Copilot</div><div class="cert-card-issuer">Microsoft · Jun 2025</div><a href="#" class="cert-view-link">View Certificate →</a></div>
-    
-      <div class="cert-card fade-up"><span class="cert-card-icon">🪟</span><div class="cert-card-name">Optimize and Extend M365 Copilot</div><div class="cert-card-issuer">Microsoft · Jun 2025</div><a href="#" class="cert-view-link">View Certificate →</a></div>
-      <div class="cert-card fade-up"><span class="cert-card-icon">🎓</span><div class="cert-card-name">Art of Problem Definition</div><div class="cert-card-issuer">UNICEF / Passport to Earning · Dec 2025</div><a href="#" class="cert-view-link">View Certificate →</a></div>
+      <div class="cert-card fade-up"><span class="cert-card-icon">🎓</span><div class="cert-card-name">Fresh Graduate Training</div><div class="cert-card-issuer">IEB · Dec 2025</div><a href="https://drive.google.com/file/d/1M8UahHL_3QxoLCB7bgxu8IMqlzpjszOu/view?usp=sharing" class="cert-view-link">View Certificate →</a></div>
+      <div class="cert-card fade-up"><span class="cert-card-icon">✨</span><div class="cert-card-name">Art of Problem Definition</div><div class="cert-card-issuer">UNICEF / Passport to Earning · Dec 2025</div><a href="https://drive.google.com/file/d/1woDtWlETU2UHZRzuwJyShMS1OkNYruB5/view?usp=sharing" class="cert-view-link">View Certificate →</a></div>
     </div>
   </section>
 
